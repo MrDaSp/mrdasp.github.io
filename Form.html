@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+</head>
+<body>
+<form>
+	<label>
+		<input type="text">
+	</label>
+	<input type="submit">
+</form>
+
+
+<form method="get" action="index.html">
+	<label>
+		<input type="text" name="firstName">
+	</label> Primo
+	<label>
+		<input type="text" name="lastName">
+	</label> Secondo
+	<input type="submit">
+</form>
+
+<label for="ck">HTML : </label>
+<input type="checkbox" name="ck" id="ck">
+
+<label for="1"></label>
+<select name="whatever" id="1">
+	<option value="one">One</option>
+	<option value="two">Two</option>
+	<option value="three">Three</option>
+</select>
+
+<label>
+<textarea name="message" style="width: 100px; height: 100px">
+ Default Content
+</textarea>
+</label>
+
+
+<form>
+	<label>
+		<input type="text" pattern="[a-z,A-Z,0-9]">
+	</label>
+	<input type="submit" value="Submit">
+
+	<form>
+		<fieldset>
+			<legend>Choose your favorite monster</legend>
+			<input type="radio" id="kraken" name="monster">
+			<label for="kraken">Kraken</label><br/>
+			<input type="radio" id="sasquatch" name="monster">
+			<label for="sasquatch">Sasquatch</label><br/>
+			<input type="radio" id="mothman" name="monster">
+			<label for="mothman">Mothman</label>
+		</fieldset>
+	</form>
+</form>
+</body>
+</html>
