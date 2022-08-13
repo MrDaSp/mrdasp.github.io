@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Spedizione</title>
+</head>
+<body>
+
+
+  <form method="get" id="delivery" autocomplete="on">
+
+    <div>
+      <div>CAMPO</div>
+      <div>INPUT</div>
+
+    </div>
+    <div>
+      <div>
+        <label for="name">name</label>
+      </div>
+      <div>
+        <input id="name" type="text" name="name" placeholder="Nome" required>
+      </div>
+    </div>
+
+
+    <div>
+      <div>
+        <label for="lastname">Cognome</label>
+      </div>
+      <div>
+        <input id="lastname" type="text" name="lastname" placeholder="Cognome" required>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label for="address">Indirizzo</label>
+      </div>
+      <div>
+        <input type="text" id="address" placeholder="Indirizzo" required>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label for="civico">Civico</label>
+      </div>
+      <div>
+        <input type="number" id="civico" placeholder="1">
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label for="cap">CAP</label>
+      </div>
+      <div>
+        <input type="number" name="cap" id="cap" placeholder="00000">
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label for="provincia">Provincia</label>
+      </div>
+      <div>
+        <select name="Provincia" id="provincia">
+          <option value="MI">Milano</option>
+          <option value="RM">Roma</option>
+          <option value="TO">Torino</option>
+          <option value="OTHER">Altro</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div>
+      <div>
+        <label for="city">Città</label>
+      </div>
+      <div>
+        <input type="text" id="city" name="city" placeholder="Città">
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <label for="Nazione">Nazione</label>
+      </div>
+      <div>
+        <input type="text" name="Nazione" id="Nazione" placeholder="Nazione" required>
+      </div>
+    </div>
+
+
+    <div>
+      <div>
+        <label for="telefono">Tel</label>
+      </div>
+      <div>
+        <input type="tel" name="telefono" id="telefono" required placeholder="3334455666">
+      </div>
+    </div>
+
+
+    <div>
+      <div>
+        <label for="mail">E-mail</label>
+      </div>
+      <div>
+        <input type="email" name="mail" id="mail" placeholder="e-mail" required>
+      </div>
+    </div>
+
+
+    <div>
+      <div>
+        <label for="note">Note</label>
+      </div>
+      <div>
+				<textarea name="note" id="note" cols="30" rows="10" placeholder="Note">
+
+				</textarea>
+
+      </div>
+    </div>
+
+    <div>
+      <div>
+
+      </div>
+      <div>
+        <input type="submit" value="invia">
+      </div>
+    </div>
+
+  </form>
+
+
+<button type="reset" form="delivery">Reset</button>
+
+
+
+</body>
+</html>
