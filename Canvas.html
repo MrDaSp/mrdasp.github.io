@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Canvas example</title>
+    <meta charset="UTF-8">
+    <title>Canvas example</title>
 </head>
 <body>
+
+<div style=" text-shadow: 10px 5px 10px #fff;  background-size: cover;  background-image: url(media/foto.jpg); color: #008eff; font-size: 40px; border: 1px solid #cdcdcd; box-shadow: 5px 1px 15px #dedede; border-radius: 5px; text-align: center; padding: 20vh 20vh; background-color: #dfdfdf; margin: 5vh auto 5vh auto; width: 60%">
+    HelloWorld!
+</div>
+
 <canvas id="myCanvas" width="200" height="100" style="border: 1px solid #000000">
 </canvas>
 </body>
 <script>
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  ctx.moveTo(0, 0);
-  ctx.lineTo(200, 100);
-  ctx.stroke();
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
 </script>
 </html>
