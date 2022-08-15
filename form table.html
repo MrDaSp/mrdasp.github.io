@@ -38,7 +38,7 @@
 </head>
 <body>
 <div>
-  <h3>Various type of inputs</h3>
+  <h3>input per form</h3>
   <form method="get" action="../index.html">
     <table>
       <tr>
@@ -62,7 +62,9 @@
       <tr>
         <td>color</td>
         <td class="desc">Un controllo che permette di scegliere un colore da una paletta</td>
-        <td><input type="color"></td>
+        <td><label>
+          <input type="color">
+        </label></td>
       </tr>
       <tr>
         <td>date</td>
@@ -72,11 +74,13 @@
       <tr>
         <td>datetime-local</td>
         <td class="desc">Un controllo per immettere una data con un orario (senza timezone)</td>
-        <td><input type="datetime-local"></td>
+        <td><label>
+          <input type="datetime-local">
+        </label></td>
       </tr>
       <tr>
         <td>email</td>
-        <td class="desc">Un controllo per immettere un'indirizzo email</td>
+        <td class="desc">Un controllo per immettere un indirizzo email</td>
         <td><input type="email"></td>
       </tr>
       <tr>
@@ -86,13 +90,13 @@
       </tr>
       <tr>
         <td>hidden</td>
-        <td class="desc">Un controllo che permette di immettere un'immagine da inviare al server</td>
+        <td class="desc">Un controllo che permette d'immettere un'immagine da inviare al server</td>
         <td><input type="hidden"></td>
       </tr>
       <tr>
         <td>image</td>
         <td class="desc">Un bottone grafico, che utilizza un'immagine specificata nell'attributo src</td>
-        <td><input type="image"></td>
+        <td><input type="image" alt=""></td>
       </tr>
       <tr>
         <td>month</td>
