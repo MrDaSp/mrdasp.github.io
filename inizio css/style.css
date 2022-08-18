@@ -24,12 +24,16 @@ body {
 p {margin: 50px 100px;
 	border-color: green;
 	border-width: 5px;
-	border-style: dotted}
+	border-style: dotted
+}
 
 #par1 {margin: 50px 100px;
 	border-color: yellow;
 	border-width: 5px;
-	border-style: solid}
+	border-style: solid;
+padding-top: 100px;
+	background-color: aqua
+}
 
 #par2 {margin: 50px 100px;
 	border-color: black;
