@@ -4,4 +4,34 @@
 @import "regoleh1.css";
 
 
+#zen-intro header {
+	margin: 50px 20px auto 7px;
+ border-style: solid;
+	 border-color: red;
+	border-width: 5px;
+}
+abbr[title] {
+    text-decoration: unset;
+}
 
+body {
+	margin: 50px 100px;
+	border-color: blue;
+	border-width: 5px;
+	border-style: double
+}
+
+p {margin: 50px 100px;
+	border-color: green;
+	border-width: 5px;
+	border-style: dotted}
+
+#par1 {margin: 50px 100px;
+	border-color: yellow;
+	border-width: 5px;
+	border-style: solid}
+
+#par2 {margin: 50px 100px;
+	border-color: black;
+	border-width: 5px;
+	border-style: solid}
