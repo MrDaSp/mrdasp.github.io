@@ -1,11 +1,10 @@
 @charset "utf-8"; /* CSS Document */
 
-@import "provafont.css";
 @import "regoleh1.css";
 
 
 #zen-intro header {
-	margin: 50px 20px auto 7px;
+	margin: 50px 100px auto 100px;
  border-style: solid;
 	 border-color: red;
 	border-width: 5px;
@@ -15,8 +14,9 @@ abbr[title] {
 }
 
 body {
+	
 	margin: 50px 100px;
-	border-color: blue;
+	background-image: url("../media/foto.jpg");
 	border-width: 5px;
 	border-style: double
 }
@@ -29,7 +29,7 @@ p {margin: 50px 100px;
 
 #par1 {margin: 50px 100px;
 	border-color: yellow;
-	border-width: 5px;
+	border-radius: 50% 50% 0% 0%;
 	border-style: solid;
 padding-top: 100px;
 	background-color: aqua
