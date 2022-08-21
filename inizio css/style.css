@@ -29,6 +29,7 @@ html {
 	padding: 100px;
 	background-color: white;
 	
+	
 }
 
 
@@ -39,11 +40,17 @@ body {
 	border: 50px 100px;
 	padding: 50px 100px;
 	content: 50px 100px;
-	background-image: url("../media/foto1.png");
+	background-color: aqua;
+	background-image: url("../media/foto1.png"),
+						linear-gradient(-45deg, #B7CEE2, #58575F, #534645, #7D8243,#4C5561);
+					
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-attachment: scroll;
 	border-width: 5px;
 	border-style: double;
 	background-clip: padding-box;
-	background-image: linear-gradient(yellow, green);
+	
 }
 
 p {margin: 50px 100px;	
