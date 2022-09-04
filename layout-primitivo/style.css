@@ -21,6 +21,21 @@ body {
 	border-style: double
 }
 
+.container
+/*
+		{width: 500px;
+			height: 150px;
+              margin: 0 auto;
+            border: dashed 1px #FF0000;
+*/
+				{float: left
+		}
+
+#div1 {width: 70%}
+#div2 {width: 70%}
+
+	
+
 p {margin: 50px 100px;	
 	border-color: green;
 	border-width: 5px;
