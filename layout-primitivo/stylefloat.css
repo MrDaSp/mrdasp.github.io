@@ -1,0 +1,30 @@
+
+/*questo container è per i div float */
+
+body {
+    
+    background-color: red;
+    border: 1px dotted #06F712;
+    
+    
+    
+}
+
+
+.container div {
+            
+            border: 1px solid #FF0000;
+            float: left;
+            
+            }
+        
+/*
+        #div1 {
+            
+            width: 70%;
+            
+        }
+        
+*/
+
+	

@@ -1,0 +1,17 @@
+
+
+.container
+		{width: 800px;
+			height: 150px;
+              margin: 0 auto;
+            border: solid 1px green;
+		}
+
+#div1 {float: left;
+	width: 40%;
+		}
+#div2 {float: left;
+	width: 40%;
+	}
+
+	

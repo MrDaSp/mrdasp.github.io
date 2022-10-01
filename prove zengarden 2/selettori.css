@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+		html {
+			border: 10px solid #008000;		
+		
+		}
+		
+		*{
+			border: 1px solid #000000;
+			margin: unset;
+		}
+/*
+		body {color: red;
+		padding: 100px;
+		}
+		
+		*[role="article"] {
+			padding: 100px;
+			color: green;
+			border: 1px solid #FF0000;
+		}
+		
+*/
+		p{
+			padding: 100px
+		}
+		
+		abbr{
+			text-decoration: none;
+			border: unset;
+			font-style: italic;
+			font-weight: bold;
+			}
+		
+		a {
+			text-decoration: none;
+			border: unset;
+			font-style: italic;
+			font-weight: bold;
+		}
+		
+/*		selettori ID*/
+		
+		#zen-intro
+		{
+			background-color: yellow;
+		}
+		#zen-supporting {
+			background-color: grey;
+			font-style: oblique;
+			font-weight: bolder
+		}
+		
+/*		selettori Class*/
+		
+		.summary {
+			color: white;
+			padding: 100px;
+						background: no-repeat left center/200px url("../media/banksy.png");
+			background-color: white
+					}
+	
+/*		selettori attributi	(l'ultimo attributo influisce su quelli sopra)	*/
+		
+		[role]
+		 	
+		{
+			background: linear-gradient(yellow, green);
+							
+		}
+		
+/*		selettore con asterisco si applica …elementi nel value …contenenti la substring(parola) XXX..*/
+		
+		[href *="validator"]
+		{
+			color: grey;
+		}
+		
+/*		selettore con apice si applica .. elementi nel value … cominciano con la substring(parola) XXX*/
+		
+		[href ^="http://www.mezzoblue.com/"]
+		{
+			color: purple;
+		}
+		
+/*		selettore con dollaro si applica .. elementi nel value … finisce con la substring XXX*/
+		
+		[href $="/"] /*così influisce sul selettore precedente che finisce comunque con la barra, se messo sopra no */
+		{
+			color: red
+		}
+		
+		/* si possono accoppiare i selettori ad un universal * tipo: a(elemento).class(classe)[href *="validator"] /*
+		
