@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import "main.css";
+@import "selettori.css";
+
+/*
+root{
+    --lightest-color: #D90402;
+    --light-color: #BF02AA;
+    --medium-color: #A69792;
+    --medium-dark-color: #727272;
+    --dark-color: #404040;
+    
+    --margin-left-section: 6em;
+    --right-fix: calc(var(--margin-left-section) / 20);
+    --closing-padding-botton: 2em;
+}
+*/
+
+
+
+body{
+    font-family: sans-serif;
+    background: var(--dark-color);
+    color: var(--dark-color);
+    padding: unset;
+    margin: unset;
+    }
+
+/*
+h1,h2, h3, h4, h5, h6 {
+    color: var(--dark-color);
+    text-shadow: 2px 0 5px var(--medium-dark-color);
+*/
+/*
+    border-bottom: solid 3px var(--medium-color);
+}
+*/
+
+p{
+text-align: justify;
+margin-bottom: 0;}
+
+
+/*abbr:not(header abbr) {}*/
+
+#zen_intro header {
+    
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #312d86;
+    color: white;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transform: rotate(-10deg);
+    margin: 10px 50px 50px 10px;
+}
+
+ h1 h2{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.page-wrapper {
+    padding-left: var(--margin-left-section);
+    font-size: 1.5em;
+    max-width: 1020px;
+    margin: 0 auto;
+    background-color: var(--medium-dark-color);
+    padding: 24px;
+    background-color: dimgrey;
+}
+*/
+
+/*
+.page-wrapper > div {
+    margin-right: var(--right-fix);
+}
+*/
+
+
+/*
+.section div, .main div {
+    margin-top: -1px;
+    margin-left: var(--margin-left-section);
+    
+}
+*/

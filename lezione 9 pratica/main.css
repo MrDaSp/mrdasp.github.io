@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main > div:nth-last-child(2) {
+    padding-bottom: calc(var(--closing-padding-bottom) * 2);
+    border-radius: 0 0 2em 0;
+    margin-bottom: 10px;
+}
+
+.main div{
+    margin-top: -20px;
+    margin-left: 0;
+}
+
+
+div h3 {
+    font-family: cursive;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.main h3 * p::first-letter{
+    text-transform: capitalize;
+    font-family: zeyada, cursive;
+    font-style: italic;
+    color: var(--dark-color);
+    font-size: 3.6em;
+    margin: 0 5px 5px 0;
+}
