@@ -14,16 +14,37 @@
 
 
 div h3 {
+    color: white;
     font-family: cursive;
     font-size: 1em;
     margin-bottom: 1em;
 }
 
-.main h3 * p::first-letter{
+.main h3 * p:first-letter{
     text-transform: capitalize;
     font-family: zeyada, cursive;
     font-style: italic;
-    color: var(--dark-color);
+/*    color: var(--dark-color);*/
     font-size: 3.6em;
     margin: 0 5px 5px 0;
+}
+
+header {
+    background: no-repeat url("../lezione 9 pratica/immagini/sfondo.jpg") ;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: calc(100%-40px);
+    height: 50vh;
+    padding: 20px;    
+    
+}
+
+div.wrapper {
+    display: none;
+}
+
+footer a:nth-child(3){
+    display: none;
 }

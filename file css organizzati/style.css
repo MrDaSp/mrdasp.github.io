@@ -64,7 +64,6 @@ margin-bottom: 0;}
     padding: 0;
 }
 
-/*
 .page-wrapper {
     padding-left: var(--margin-left-section);
     font-size: 1.5em;
@@ -74,19 +73,14 @@ margin-bottom: 0;}
     padding: 24px;
     background-color: dimgrey;
 }
-*/
 
-/*
 .page-wrapper > div {
     margin-right: var(--right-fix);
 }
-*/
 
 
-/*
 .section div, .main div {
     margin-top: -1px;
     margin-left: var(--margin-left-section);
     
 }
-*/

@@ -5,7 +5,7 @@ section {
 /*    padding: 30% var(--right-fix) 5px 0;*/
     text-align: right;
 /*    background: linear-gradient(green, grey), var(--medium-dark-color), linear-gradient(90deg, #D9040200, var(--light-color)), no-repeat url("immagini/sfondo.jpg");*/
-    background: no-repeat url("immagini/sfondo.jpg") ;
+/*    background: no-repeat url("immagini/sfondo.jpg") ;*/
 /*    background: var(--medium-dark-color);*/
 }
 
@@ -37,6 +37,10 @@ header{
 }
 */
 
+header h1, header h2{
+    position: absolute;
+}
+
 header h1 {
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
     padding: 0 auto;
@@ -52,17 +56,19 @@ header h1 {
 }
 
 header h2 {
-    margin: 0 auto;
+    margin: 5 auto;
     font-family: zeyada;
     font-style: italic;
     font-size: 2em;
     color: white;
     text-shadow: 2px 0.5px var(--medium-color);
+/*    bottom: 2px;*/
     }
 
+/*
 header abbr {
     text-decoration: unset;
     color: unset;
     }
-
+*/
 

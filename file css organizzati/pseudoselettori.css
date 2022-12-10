@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+a:link {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+}
+
+a:visited {
+    text-decoration: underline !important;
+    color: purple;
+}
