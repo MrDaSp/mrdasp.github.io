@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+header {
+/*    background: no-repeat url("../lezione 9 pratica/immagini/sfondo.jpg") ;*/
+    background: linear-gradient(black, white);
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+/*    width: 100%;*/
+    width: calc(100%-40);
+    height: 300px;
+    padding: 20px;    
+    
+}
+
+
+header h1, header h2{
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+    
+    
+}
+
+header h1 {
+    position: absolute;
+    bottom: 0px;
+    font-size: 3em;
+    right: 0;
+    color: aquamarine
+}
+
+
+header h2 {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    font-family: zeyada;
+    font-style: italic;
+    font-size: 2em;
+    color: white;
+    text-shadow: 2px 0.5px var(--medium-color);
+
+}
+
+
+header abbr {
+    text-decoration: unset;
+    color: red;
+    }
+
+.preamble h3 {
+    position: relative;
+    left: 69%;
+    color: orange;
+    font-family: cursive;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
