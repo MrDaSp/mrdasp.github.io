@@ -129,6 +129,6 @@ section div article img{
 }
 
 section div article p{
-	overflow-y: auto;
+	overflow-y: scroll;
 	text-align: justify;
 	}
