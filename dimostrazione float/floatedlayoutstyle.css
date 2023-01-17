@@ -124,11 +124,12 @@ section div article:nth-child(odd){
 
 section div article img{
 	float: left;
-	margin-left: 1.5em;
 	margin-bottom: 1em;
+	margin-right: 1em;
 }
 
 section div article p{
-	overflow-y: scroll;
+	overflow-y: auto;
 	text-align: justify;
+	max-height: 300px;
 	}
