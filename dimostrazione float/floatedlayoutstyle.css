@@ -132,3 +132,13 @@ section div article p{
 	overflow-y: scroll;
 	text-align: justify;
 	}
+
+/** MY-CHANGES **/
+section div article img{
+	margin-right: 1em; /** JUST APPLY THE MARGIN TO RIGHT?? */
+}
+
+section div article p{
+	overflow-y: auto; /** APPLY SCROLLBARS WHEN NEEDED */
+	max-height: 300px; /** PUT THEN AN MAX-HEIGHT or A (FIXED) HEIGHT */
+}
