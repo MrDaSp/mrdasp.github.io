@@ -104,8 +104,7 @@ main section div article{
 }
 
 article{
-	background-color: green;
-	padding: 1.5em;
+		padding: 1.5em;
 }
 /*section margin collapse problem*/
 
@@ -132,5 +131,4 @@ section div article img{
 section div article p{
 	overflow-y: auto;
 	text-align: justify;
-	margin: 0 1em 0 0;
-}
+	}
