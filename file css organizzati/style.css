@@ -70,9 +70,8 @@ margin-bottom: 0;}
     font-size: 1.5em;
     max-width: 1020px;
     margin: 0 auto;
-    background-color: var(--medium-dark-color);
+    background-color: var(--medium-dark-color) dimgrey;
     padding: 24px;
-    background-color: dimgrey;
 }
 
 .page-wrapper > div {
