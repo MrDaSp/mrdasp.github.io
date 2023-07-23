@@ -1,0 +1,122 @@
+/*
+FOUNDATION
+*/
+
+:root {
+	box-sizing: border-box;
+}
+
+
+*, 
+::after, ::before {
+	box-sizing: inherit;
+}
+
+body * + * {
+	margin-top: 1.5em;
+}
+
+/*
+GENERIC RULES
+*/
+
+
+body{
+	
+	background: #bbb;
+	font-family: Arial;
+	
+} 
+
+header,
+footer{
+	background-color: #0072b0;
+	color: white;
+	padding: .5em 1.5em;
+}
+
+footer{
+	font-size: x-large;
+}
+
+main{
+	background-color: #ffffff;
+	padding: 0 1.5em 1.5em 1.5em;
+	
+	
+}
+
+header,
+main,
+footer,
+article{
+	border-radius: .5em;
+}
+
+
+article h3{
+	margin: 0;
+}
+
+/*
+LAYOUT
+*/
+/* double container pattern */
+.container{
+	max-width: 1080px;
+	margin: auto;
+}
+
+/*clear fix*/
+section::after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+/*ARTICLE*/
+
+main section div article:first-child{
+	margin-top: 1.5em
+}
+
+main section div article:nth-child(2n+1){
+background-color: red;
+margin-right: 1.5em;
+clear: left;
+}
+
+main section div article{
+		width: calc(50% - (1.5em / 2) );
+}
+
+article{
+	float: left;
+	width: 50%;
+	background-color: aqua;
+	padding: 1.5em;
+}
+
+/*SECTION MARGIN COLLAPSING PROBLEM*/
+
+section > *:first-child{
+	magin-top: 1.5em;
+	background: green;
+}
+
+section::before{
+	display: table;
+	content: "";
+	
+}
+
+/*INTERNAL ARTICLE*/
+section div article img{
+	float:left;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+section div article p{
+	overflow: auto;
+	text-align: justify;
+}
