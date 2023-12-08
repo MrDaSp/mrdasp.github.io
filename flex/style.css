@@ -1,0 +1,171 @@
+/*
+initial settings
+*/
+
+:root{
+	box-sizing: border-box;	
+}
+
+*,
+::before,
+::after{
+	box-sizing: inherit;
+}
+
+/*General Settings
+*/
+
+body * + *{
+	margin-top: 1.5em;
+}
+
+.container{
+	max-width: 1080px;
+	margin: 0 auto;
+	background-color: yellow;
+}
+
+/*Custom Settings
+*/
+
+body {
+  background-color: aqua;
+	font-family: sans-serif;
+}
+
+
+/*Nav Section
+*/
+
+ul.site-nav{
+	display: flex;
+	padding: 0.5em;
+	list-style-type: none;
+	background-color: blue;
+	border-radius: 0.2em;
+}
+
+ul.site-nav > li{
+	margin-top: 0;
+}
+
+ul.site-nav > li > a{
+	display: block;
+	padding: 0.5em 1em;
+	background-color: brown;
+	color: white;
+	text-decoration: none;
+}
+
+ul.site-nav > li > a:hover{
+	background-color: red;
+}
+
+ul.site-nav > li + li{
+	margin-left: .5em;
+}
+
+ul.site-nav > .nav-right{
+	margin-left: auto;
+}
+
+/*MAIN*/
+
+/*Flex Container*/
+
+main{
+	display: flex;
+}
+
+/*Flex Item*/
+main > * + *{
+	margin-top: 0;
+	margin-left: 1.5em;
+}
+
+.tile{
+	background-color: white;
+	padding: 1.5em;
+}
+
+.tile :first-child{
+	margin-top: 0;
+}
+
+.column-main{
+	flex: 3;
+}
+
+.column-sidebar{
+	flex: 1;
+}
+
+.column-sidebar{
+	display: flex;
+	flex-direction: column;
+}
+
+.column-sidebar > .tile{
+	flex: 1;
+}
+
+/*Sidebar*/
+
+.login-form h3{
+	margin: 0;
+	font-size: .9em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: right;
+}
+
+.login-form label{
+	display: block;
+	text-align: left;
+	font-weight: bold;
+}
+
+.login-form input [type="text"], .login-form input [type="password"]{
+	display: block;
+	width: 100%;
+	margin-top: 0;
+	border: 1px solid #dedede;
+	padding: 0.5em 1em;
+}
+
+.centered{
+	text-align: center
+}
+
+.cost{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 0.7em;
+}
+
+.cost > span{
+	margin-top: 0;
+}
+
+.cost-currency{
+	font-size: 2em;
+}
+
+.cost-dollars{
+	font-size: 4em;
+}
+
+.cost-cents{
+	font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
