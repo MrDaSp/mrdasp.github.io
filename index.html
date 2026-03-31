@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrDaSp | Software Architect & Developer</title>
+    <meta name="description" content="Portfolio ufficiale di MrDaSp. Prodotti software professionali: BetMirato, GeoRilievi e Gestionale Cloud.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-dark: #090a0f;
+            --bg-card: rgba(255, 255, 255, 0.02);
+            --bg-card-hover: rgba(255, 255, 255, 0.05);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            
+            --accent-gestionale: 249, 115, 22; /* Orange 500 */
+            --accent-georilievi: 14, 165, 233; /* Sky 500 */
+            --accent-betmirato: 16, 185, 129; /* Emerald 500 */
+            
+            --p-padding: 1.5rem;
+            --border-radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(249, 115, 22, 0.05) 0%, transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.05) 0%, transparent 25%),
+                radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 25%);
+            background-attachment: fixed;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+
+        /* Nav */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background: rgba(9, 10, 15, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-glass);
+            transition: all 0.3s ease;
+        }
+        /* Logo Metallico Transformer */
+        .logo-metal {
+            font-size: 2.4rem;
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            
+            /* Metallo */
+            background: linear-gradient(
+                to bottom,
+                #ffffff 0%,
+                #cbd5e1 40%,
+                #64748b 48%,
+                #1e293b 50%,
+                #94a3b8 70%,
+                #e2e8f0 100%
+            );
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            /* Rilievo Ombre 3D */
+            text-shadow: 
+                0px 2px 2px rgba(255, 255, 255, 0.4),
+                0px -1px 1px rgba(0, 0, 0, 0.8),
+                0px 8px 10px rgba(0, 0, 0, 0.6),
+                0px 0px 10px rgba(96, 165, 250, 0.3); /* Leggero glow tecnologico */
+        }
+        .logo-metal svg {
+            width: 38px;
+            height: 38px;
+            color: #60a5fa;
+            filter: drop-shadow(0 0 5px rgba(96, 165, 250, 0.5));
+            -webkit-text-fill-color: initial;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 8rem 5% 4rem 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .hero-badge {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border-glass);
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #10b981;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 0.5rem; /* Margine ridotto */
+            max-width: 900px;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 1.5rem; /* Margine ridotto */
+        }
+
+        /* CTA Buttons */
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: #fff;
+            color: #000;
+            border: 1px solid #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+        }
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-main);
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(10px);
+        }
+        .btn-secondary:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Glass Card */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                        rgba(var(--accent-rgb), 0.06), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(var(--accent-rgb), 0.3);
+            box-shadow: 0 20px 40px -10px rgba(var(--accent-rgb), 0.1);
+        }
+        
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card[data-color="orange"] { --accent-rgb: var(--accent-gestionale); }
+        .card[data-color="blue"] { --accent-rgb: var(--accent-georilievi); }
+        .card[data-color="green"] { --accent-rgb: var(--accent-betmirato); }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: rgba(var(--accent-rgb), 0.1);
+            color: rgb(var(--accent-rgb));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(var(--accent-rgb), 0.2);
+            box-shadow: inset 0 0 20px rgba(var(--accent-rgb), 0.1);
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        .card-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            margin-top: auto;
+        }
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #d1d5db;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgb(var(--accent-rgb));
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: gap 0.2s;
+        }
+        .card-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* Sponsor */
+        .sponsor-section {
+            text-align: center;
+            padding: 3rem 5%;
+            margin-top: 3rem;
+            background: rgba(255,255,255,0.01);
+            border-top: 1px solid var(--border-glass);
+            border-bottom: 1px solid var(--border-glass);
+        }
+        .sponsor-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .sponsor-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+        .sponsor-link span {
+            color: #eab308; /* Giallo luminescente */
+            text-shadow: 0 0 8px rgba(234, 179, 8, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-glass);
+            padding: 3rem 5%;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 5rem;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav { padding: 1rem 5%; }
+            .card { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav>
+        <a href="#" class="logo-metal">
+            <i data-lucide="cpu"></i> DaniTech
+        </a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-badge reveal">
+            <span class="dot"></span> Software Developer & Tech Enthusiast
+        </div>
+        <h1 class="reveal delay-1">Costruisco Ecosistemi <br> <span class="text-gradient">Digitali Scalabili.</span></h1>
+        <p class="reveal delay-2">
+            Architetture cloud moderne, applicazioni topografiche ad altissima precisione e piattaforme predittive avanzate. Dal codice alla soluzione, porto l'innovazione dove serve.
+        </p>
+        <div class="cta-group reveal delay-3">
+            <a href="#projects" class="btn btn-primary">
+                Esplora i Progetti <i data-lucide="arrow-down" style="width: 18px; height: 18px;"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Projects -->
+    <section class="projects-section" id="projects">
+        <div class="section-header reveal">
+            <h2>L'Ecosistema App</h2>
+            <p style="color: var(--text-muted); margin-top: 1rem;">Le mie creazioni di punta: soluzioni custom progettate e sviluppate da zero.</p>
+        </div>
+
+        <div class="grid">
+            
+            <!-- Card 1: Gestionale -->
+            <div class="card reveal delay-1" data-color="orange" id="card-gestionale">
+                <div class="card-icon">
+                    <i data-lucide="building-2" style="width: 32px; height: 32px;"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Gestionale Cloud</h3>
+                    <p>Architettura aziendale SaaS. Gestisce l'inventario, la fatturazione complessa e la generazione intelligente dei Documenti di Trasporto (DDT). Sincronizzato con l'intelligenza artificiale tramite Bot Telegram per la lettura automatica delle bolle.</p>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Supabase</span>
+                    <span class="tag">Telegram Bot AI</span>
+                </div>
+                <!-- Link al gestionale cloud (Oracle VM IP Pubblico) -->
+                <a href="http://80.225.81.187" target="_blank" class="card-link">
+                    Apri Dashboard <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                </a>
+            </div>
+
+            <!-- Card 2: GeoRilievi -->
+            <div class="card reveal delay-2" data-color="blue" id="card-georilievi">
+                <div class="card-icon">
+                    <i data-lucide="satellite" style="width: 32px; height: 32px;"></i>
+                </div>
+                <div class="card-content">
+                    <h3>GeoRilievi Mobile</h3>
+                    <p>App mobile per topografia avanzata. Si interfaccia con antenne GNSS (es. Emlid Reach) e coordina i voli fotogrammetrici GPS dei droni DJI (Phantom 4 RTK / Mavic 3E). Processa NMEA ad alta frequenza per georefenziazione in tempo reale.</p>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">App Mobile</span>
+                    <span class="tag">GPS RTK</span>
+                    <span class="tag">NMEA 0183</span>
+                    <span class="tag">Drone API</span>
+                </div>
+                <a href="downloads/georilievo15032026.apk" download class="card-link">
+                    Scarica APK <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+                </a>
+            </div>
+
+            <!-- Card 3: BetMirato -->
+            <div class="card reveal delay-3" data-color="green" id="card-betmirato">
+                <div class="card-icon">
+                    <i data-lucide="trending-up" style="width: 32px; height: 32px;"></i>
+                </div>
+                <div class="card-content">
+                    <h3>BetMirato Analytics</h3>
+                    <p>Dashboard analitica per Value Betting. Uno scanner algoritmico monitora le reali quote mondiali, calcolando l'Edge statistico (Vantaggio Matematico) sulle partite di calcio. Interfaccia Kanban dinamica con tracker di banca (Bankroll) sincronizzato in cloud.</p>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">The-Odds-API</span>
+                    <span class="tag">Poisson Math</span>
+                    <span class="tag">GitHub Actions</span>
+                </div>
+                <a href="https://mrdasp.github.io/betmirato/index.html" class="card-link" target="_blank">
+                    Apri Dashboard <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Area Sponsor -->
+    <div class="sponsor-section reveal">
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px;">Sponsored By</p>
+        <a href="https://www.elmaedilizia.it" target="_blank" class="sponsor-link">
+            <i data-lucide="hard-hat" style="color: #eab308; filter: drop-shadow(0 0 5px rgba(234,179,8,0.6));"></i> Elma<span>Edilizia</span>.it
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 DaniTech. Sviluppato e Progettato con precisione ingegneristica.</p>
+    </footer>
+
+    <!-- Script JavaScript Vanilla per animazioni -->
+    <script>
+        // Inizializza le bellissime icone vettoriali Lucide
+        lucide.createIcons();
+
+        // Reveal Animation allo scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => revealOnScroll.observe(el));
+
+        // Effetto luce radiale (Radial Glow Mouse Tracking) sulle Glass Cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
