@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecnico Rilievi & Soluzioni Digitali | DaniTech</title>
-    <meta name="description" content="Portfolio ufficiale di DaniTech. Prodotti software professionali: BetMirato, GeoRilievi e Gestionale Cloud.">
+    <meta name="description" content="Portfolio ufficiale di DaniTech. Prodotti software professionali: BetMirato, CryptoMirato, GeoRilievi e Gestionale Cloud.">
     
     <!-- Open Graph (Per anteprime WhatsApp, Telegram, Facebook) -->
     <meta property="og:title" content="Tecnico Rilievi & Soluzioni Digitali | DaniTech">
@@ -32,6 +32,7 @@
             --accent-gestionale: 249, 115, 22; /* Orange 500 */
             --accent-georilievi: 14, 165, 233; /* Sky 500 */
             --accent-betmirato: 16, 185, 129; /* Emerald 500 */
+            --accent-cryptomirato: 139, 92, 246; /* Violet 500 */
             
             --p-padding: 1.5rem;
             --border-radius: 16px;
@@ -280,6 +281,7 @@
         .card[data-color="orange"] { --accent-rgb: var(--accent-gestionale); }
         .card[data-color="blue"] { --accent-rgb: var(--accent-georilievi); }
         .card[data-color="green"] { --accent-rgb: var(--accent-betmirato); }
+        .card[data-color="purple"] { --accent-rgb: var(--accent-cryptomirato); }
 
         .card-icon {
             width: 60px;
@@ -497,6 +499,26 @@
                     <span class="tag">GitHub Actions</span>
                 </div>
                 <a href="https://mrdasp.github.io/betmirato/index.html" class="card-link" target="_blank">
+                    Apri Dashboard <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+                </a>
+            </div>
+
+            <!-- Card 4: CryptoMirato -->
+            <div class="card reveal delay-1" data-color="purple" id="card-cryptomirato">
+                <div class="card-icon">
+                    <i data-lucide="bitcoin" style="width: 32px; height: 32px;"></i>
+                </div>
+                <div class="card-content">
+                    <h3>CryptoMirato</h3>
+                    <p>Consulente algoritmico per criptovalute. Scansiona automaticamente le Top 15 monete mondiali ogni 30 minuti, calcolando RSI a 14 giorni per generare segnali di acquisto e vendita. Include portafoglio personale con tracking P&L in tempo reale e fee già scalate.</p>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">CoinGecko API</span>
+                    <span class="tag">RSI Analysis</span>
+                    <span class="tag">Supabase Auth</span>
+                </div>
+                <a href="https://mrdasp.github.io/cryptomirato/" class="card-link" target="_blank">
                     Apri Dashboard <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
                 </a>
             </div>
